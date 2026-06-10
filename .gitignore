@@ -1,0 +1,18 @@
+# Sekrety
+.env
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+
+# Duże pliki
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.rar
+
+# System
+.DS_Store
