@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "WORKSPACE=/Users/piotrmatejuk/Desktop/PiotrekMate; LAST=$(grep -o 'Ostatni update: [0-9-]* [0-9:]*' \"$WORKSPACE/.claude/rules/NOW.md\" 2>/dev/null | sed 's/Ostatni update: //' | head -1); if MEMORY_UPDATE_WORKSPACE=\"$WORKSPACE\" python3 \"$WORKSPACE/.claude/skills/memory-update/scripts/parse_sessions.py\" --since \"${LAST:-2000-01-01}\" --stats-json /tmp/mu-hook-stats.json >/dev/null 2>/dev/null; then python3 -c \"import json,sys; d=json.load(open('/tmp/mu-hook-stats.json')); sys.exit(2 if d.get('sessions',0) > 0 else 0)\" 2>/dev/null || exit 0; fi",
+            "asyncRewake": true,
+            "statusMessage": "Sprawdzam nowe sesje...",
+            "rewakeMessage": "Wykryto nowe sesje od ostatniego memory update. Uruchom /memory-update.",
+            "rewakeSummary": "Memory Update oczekuje"
+          }
+        ]
+      }
+    ]
+  }
+}

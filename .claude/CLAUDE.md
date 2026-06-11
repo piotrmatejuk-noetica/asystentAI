@@ -9,6 +9,7 @@ Pliki w `.claude/rules/` ładują się automatycznie do system promptu — bez i
 | `rules/persona.md` | Profil użytkownika, styl komunikacji, wartości | Zawsze |
 | `rules/soul.md` | Osobowość AI, charakter, styl myślenia | Zawsze |
 | `rules/biznes.md` | Kontekst biznesowy, stack, platformy | Zawsze |
+| `rules/NOW.md` | Bieżący kontekst pracy — projekty, priorytety, blokery, ustalenia | Zawsze |
 | `rules/ai-writing-patterns.md` | Anty-AI checklist — jak pisać po ludzku po polsku | Przy pracy w `Marketing/**` |
 | `rules/redakcja-hipnozy-bez-czarow.md` | Głos autora + warstwa anty-AI do książki i postów | Przy pracy w `Marketing/**` |
 
@@ -38,6 +39,7 @@ Folder `.claude/` zawiera konfigurację Claude Code dla tego workspace:
 **Workflow / Zarządzanie:**
 - `daily` — codzienna aktualizacja systemu zadań (archiwizacja, regeneracja dashboardu, raport)
 - `reflect` — walidacja obserwacji o użytkowniku → aktualizacja plików kontekstowych
+- `memory-update` — parsuje logi sesji Claude Code, wyciąga sygnały i aktualizuje NOW.md
 - `utworz-zadanie` — tworzenie nowego zadania w systemie Obsidian
 - `porzadkuj-media` — porządkowanie grafik, wideo i PDFów w workspace
 

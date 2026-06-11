@@ -1,1 +1,6 @@
-{}
+{
+  "promptDelete": false,
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "restrictedMode": false
+}
