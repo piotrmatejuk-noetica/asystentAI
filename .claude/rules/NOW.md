@@ -22,8 +22,8 @@
 ## Otwarte decyzje
 
 - [ ] Obsidian Git: wyłączyć Restricted Mode → plugin załaduje się automatycznie
-- [ ] Claude Cron: zalogować Claude CLI na VPS → `tmux new -s login` → `su - claude` → `claude` → skopiować URL → otworzyć w przeglądarce → zalogować
-- [ ] Claude Cron: skonfigurować 3 joby w dashboardzie (http://100.120.58.26:7777 przez Tailscale)
+- [x] Claude Cron: Claude CLI zalogowany jako piotr.matejuk@gmail.com ✅
+- [x] Claude Cron: 3 joby skonfigurowane (memory-update 06:00, weekly-report pon 08:00, vault-git-pull co 4h) ✅
 - [ ] GitHub App: zainstalować na repo piotrmatejuk-noetica/asystentAI (strona otwarta w przeglądarce)
 
 ## Ostatnie ustalenia
@@ -38,11 +38,13 @@
 - 2026-06-11: Happy 1.1.8 + Claude Code 2.1.172 + Bun na VPS; autostart systemd
 - 2026-06-11: Obsidian Git 2.38.3 zainstalowany ręcznie; auto-sync co 10 min, GitHub token skonfigurowany
 - 2026-06-11: SessionStart hook skonfigurowany — auto-uruchamia /memory-update na starcie sesji
+- 2026-06-11: Claude Cron VPS zainstalowany — systemd claude-cron.service, port 7777, workspace /home/claude/vault-git, Claude zalogowany jako piotr.matejuk@gmail.com
+- 2026-06-11: Claude Cron Mac zainstalowany — /Users/piotrmatejuk/Documents/claude-cron, autostart hook w settings.json, CLAUDE_CRON_VPS_URL=http://100.120.58.26:7777
+- 2026-06-11: 3 joby skonfigurowane: memory-update (co dzień 06:00 Warsaw), weekly-report (pon 08:00 Warsaw), vault-git-pull (co 4h)
 - 2026-06-10: deep-research skill działa — perplexity/sonar-deep-research przez OpenRouter, koszt ~$0.20/raport
 
 ## Blokery
 
-- Claude Cron VPS: zaloguj Claude CLI → `! ssh root@5.180.180.200` → `su - claude` → `claude` → otwórz URL w przeglądarce → zaloguj → `Ctrl+C` gdy zalogowany → wróć i skonfiguruj 3 joby w dashboardzie
 - Obsidian Git: Restricted Mode blokuje plugin. Fix: Settings → Community plugins → wyłącz "Restricted mode"
 - GitHub App: wymaga kliknięcia na https://github.com/apps/claude → Install → wybrać repo asystentAI
 
@@ -58,4 +60,4 @@
 | vault-git | ✅ sklonowany | /root/vault-git, pull co 4h |
 | Claude Cron VPS | ✅ działa | systemd claude-cron.service, port 7777, workspace: /home/claude/vault-git |
 | Claude Cron Mac | ✅ działa | /Users/piotrmatejuk/Documents/claude-cron, autostart hook, VPS URL skonfigurowany |
-| Claude Login (VPS) | ⚠️ wymaga akcji | su - claude → claude → zaloguj w przeglądarce |
+| Claude Login (VPS) | ✅ zalogowany | piotr.matejuk@gmail.com |
