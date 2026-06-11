@@ -21,10 +21,10 @@
 
 ## Otwarte decyzje
 
-- [ ] Obsidian Git: wyłączyć Restricted Mode → plugin załaduje się automatycznie
+- [x] Obsidian Git: restrictedMode=false, plugin aktywny ✅ (jeśli nie działa — restart Obsidiana)
 - [x] Claude Cron: Claude CLI zalogowany jako piotr.matejuk@gmail.com ✅
 - [x] Claude Cron: 3 joby skonfigurowane (memory-update 06:00, weekly-report pon 08:00, vault-git-pull co 4h) ✅
-- [ ] GitHub App: zainstalować na repo piotrmatejuk-noetica/asystentAI (strona otwarta w przeglądarce)
+- [x] GitHub App: zainstalowany na piotrmatejuk-noetica/asystentAI ✅
 
 ## Ostatnie ustalenia
 
