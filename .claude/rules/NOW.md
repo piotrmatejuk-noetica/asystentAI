@@ -8,7 +8,7 @@
 |---------|--------|----------|-------|
 | Personal OS Claude Code | Gotowy | — | Pełen stack: Happy + Claude Code + Telegram Channels + Tailscale + vault-git na VPS; cloud routines aktywne |
 | Marketing SACRUM | Aktywny | ciągły | Pozyskiwanie klientów terapia psychodeliczna, Meta Ads + IG |
-| Matejuk AI | Planowanie | — | Agent: odpowiada za Piotra na zapytania + wykonuje zadania autonomicznie |
+| Matejuk AI | ✅ Zbudowany | — | Bot live 24/7 na VPS; czeka na App Passwords do Gmail (3 konta) |
 | Magda marketing | Startuje | — | Od zera: socjale, marka osobista, Google/Meta Ads, baza mailingowa |
 | egoisnt.com | Aktywny | — | CRM w budowie, Shopify/Next.js |
 
@@ -37,6 +37,7 @@
 - 2026-06-11: Telegram Channels live — bot sparowany z ID 1763598560, policy allowlist, działa 24/7 na VPS
 - 2026-06-11: Happy 1.1.8 + Claude Code 2.1.172 + Bun na VPS; autostart systemd
 - 2026-06-11: Obsidian Git 2.38.3 zainstalowany ręcznie; auto-sync co 10 min, GitHub token skonfigurowany
+- 2026-06-11: Matejuk AI zbudowany — bot live 24/7 (systemd matejuk-ai-bot), Claude Cron jobs: email-morning (05:00 UTC=07:00 Warsaw) + email-check (co 2h); czeka na App Passwords
 - 2026-06-11: SessionStart hook skonfigurowany — auto-uruchamia /memory-update na starcie sesji
 - 2026-06-11: skill kie-generate zainstalowany — Kie.ai + ImgBB skonfigurowane, brand rules SACRUM, output Marketing/media/
 - 2026-06-11: Claude Cron VPS zainstalowany — systemd claude-cron.service, port 7777, workspace /home/claude/vault-git, Claude zalogowany jako piotr.matejuk@gmail.com
@@ -46,8 +47,7 @@
 
 ## Blokery
 
-- Obsidian Git: Restricted Mode blokuje plugin. Fix: Settings → Community plugins → wyłącz "Restricted mode"
-- GitHub App: wymaga kliknięcia na https://github.com/apps/claude → Install → wybrać repo asystentAI
+- **Matejuk AI — Gmail App Passwords**: Wejdź na https://myaccount.google.com/apppasswords dla każdego konta i wygeneruj 16-znakowy kod → wpisz przez: `ssh root@5.180.180.200` → `cd /home/claude/vault-git/Projekty/SACRUM/matejuk-ai` → `python3 setup/setup_email.py`
 
 ## Infrastruktura VPS (5.180.180.200 / klauzule)
 
