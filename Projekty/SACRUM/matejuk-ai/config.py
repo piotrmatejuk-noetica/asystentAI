@@ -36,11 +36,12 @@ OPENROUTER_API_KEY = _req("OPENROUTER_API_KEY")
 
 # Gmail accounts: list of dicts
 EMAIL_ACCOUNTS = []
-for _alias, _email_key, _pass_key, _imap_host in [
-    ("piotr-matejuk", "GMAIL_PIOTR_EMAIL", "GMAIL_PIOTR_APP_PASSWORD", "imap.gmail.com"),
-    ("sacrum", "GMAIL_SACRUM_EMAIL", "GMAIL_SACRUM_APP_PASSWORD", "imap.gmail.com"),
-    ("psychedelictherapy", "GMAIL_PSYCHEDELIC_EMAIL", "GMAIL_PSYCHEDELIC_APP_PASSWORD", "imap.gmail.com"),
+for _alias, _email_key, _pass_key, _imap_host_key, _imap_default, _smtp_default, _smtp_port_default in [
+    ("piotr-matejuk",      "GMAIL_PIOTR_EMAIL",       "GMAIL_PIOTR_APP_PASSWORD",       "GMAIL_PIOTR_IMAP_HOST",       "imap.gmail.com",   "smtp.gmail.com",   587),
+    ("sacrum",             "GMAIL_SACRUM_EMAIL",       "GMAIL_SACRUM_APP_PASSWORD",       "GMAIL_SACRUM_IMAP_HOST",       "imap.gmail.com",   "smtp.gmail.com",   587),
+    ("psychedelictherapy", "GMAIL_PSYCHEDELIC_EMAIL",  "GMAIL_PSYCHEDELIC_APP_PASSWORD",  "GMAIL_PSYCHEDELIC_IMAP_HOST",  "h30.seohost.pl",   "h30.seohost.pl",   587),
 ]:
+    _imap_host = os.environ.get(_imap_host_key, _imap_default)
     email = os.environ.get(_email_key, "")
     password = os.environ.get(_pass_key, "")
     if email and password:
@@ -49,8 +50,8 @@ for _alias, _email_key, _pass_key, _imap_host in [
             "email": email,
             "password": password,
             "imap_host": _imap_host,
-            "smtp_host": "smtp.gmail.com",
-            "smtp_port": 587,
+            "smtp_host": _smtp_default,
+            "smtp_port": _smtp_port_default,
         })
 
 # SQLite state DB path (on VPS)

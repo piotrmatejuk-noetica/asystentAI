@@ -47,7 +47,7 @@
 
 ## Blokery
 
-- **Matejuk AI — Gmail App Passwords**: Wejdź na https://myaccount.google.com/apppasswords dla każdego konta i wygeneruj 16-znakowy kod → wpisz przez: `ssh root@5.180.180.200` → `cd /home/claude/vault-git/Projekty/SACRUM/matejuk-ai` → `python3 setup/setup_email.py`
+- **Matejuk AI — piotr@sacrum.life**: Włącz IMAP w Gmail → Settings → Forwarding and POP/IMAP → Enable IMAP, potem wyślij App Password z myaccount.google.com/apppasswords
 
 ## Infrastruktura VPS (5.180.180.200 / klauzule)
 
