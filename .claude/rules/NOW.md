@@ -1,6 +1,6 @@
 # NOW — Bieżący kontekst
 
-*Ostatni update: 2026-06-11 09:30*
+*Ostatni update: 2026-06-11 12:30*
 
 ## Aktywne projekty
 
@@ -17,12 +17,13 @@
 1. Marketing SACRUM — pierwsze kampanie / content
 2. Matejuk AI — zdefiniować zakres MVP agenta
 3. Magda — uruchomić profile social media
-4. Claude Cron — zainstalować (czeka na komendy prereq + install z kursu)
+4. Claude Cron — ✅ zainstalowany na VPS i Mac; czeka na login Claude CLI na VPS (1 krok ręczny)
 
 ## Otwarte decyzje
 
 - [ ] Obsidian Git: wyłączyć Restricted Mode → plugin załaduje się automatycznie
-- [ ] Claude Cron: wkleić komendy prereq + install z kursu → reszta zautomatyzowana
+- [ ] Claude Cron: zalogować Claude CLI na VPS → `tmux new -s login` → `su - claude` → `claude` → skopiować URL → otworzyć w przeglądarce → zalogować
+- [ ] Claude Cron: skonfigurować 3 joby w dashboardzie (http://100.120.58.26:7777 przez Tailscale)
 - [ ] GitHub App: zainstalować na repo piotrmatejuk-noetica/asystentAI (strona otwarta w przeglądarce)
 
 ## Ostatnie ustalenia
@@ -41,7 +42,7 @@
 
 ## Blokery
 
-- Claude Cron: komendy prereq + install są za paywallem kursu — wklej je do chatu, reszta automatyczna
+- Claude Cron VPS: zaloguj Claude CLI → `! ssh root@5.180.180.200` → `su - claude` → `claude` → otwórz URL w przeglądarce → zaloguj → `Ctrl+C` gdy zalogowany → wróć i skonfiguruj 3 joby w dashboardzie
 - Obsidian Git: Restricted Mode blokuje plugin. Fix: Settings → Community plugins → wyłącz "Restricted mode"
 - GitHub App: wymaga kliknięcia na https://github.com/apps/claude → Install → wybrać repo asystentAI
 
@@ -53,6 +54,8 @@
 | Happy | ✅ działa | autostart systemd |
 | Telegram Channels | ✅ 24/7 | --dangerously-skip-permissions |
 | Tailscale | ✅ połączony | IP 100.120.58.26 |
-| Tailscale Funnel | ✅ aktywny | https://klauzule.tail4676a1.ts.net → :3477 |
+| Tailscale Funnel | ✅ aktywny | https://klauzule.tail4676a1.ts.net → :7777 (webhooks Claude Cron) |
 | vault-git | ✅ sklonowany | /root/vault-git, pull co 4h |
-| Claude Cron | ⏳ czeka | komendy z kursu potrzebne |
+| Claude Cron VPS | ✅ działa | systemd claude-cron.service, port 7777, workspace: /home/claude/vault-git |
+| Claude Cron Mac | ✅ działa | /Users/piotrmatejuk/Documents/claude-cron, autostart hook, VPS URL skonfigurowany |
+| Claude Login (VPS) | ⚠️ wymaga akcji | su - claude → claude → zaloguj w przeglądarce |

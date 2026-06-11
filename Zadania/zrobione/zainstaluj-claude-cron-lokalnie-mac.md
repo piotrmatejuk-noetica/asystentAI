@@ -1,5 +1,5 @@
 ---
-status: w_trakcie
+status: zrobione
 priorytet: normalne
 termin:
 utworzone: 2026-06-11
