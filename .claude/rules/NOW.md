@@ -38,6 +38,7 @@
 - 2026-06-11: Happy 1.1.8 + Claude Code 2.1.172 + Bun na VPS; autostart systemd
 - 2026-06-11: Obsidian Git 2.38.3 zainstalowany ręcznie; auto-sync co 10 min, GitHub token skonfigurowany
 - 2026-06-11: SessionStart hook skonfigurowany — auto-uruchamia /memory-update na starcie sesji
+- 2026-06-11: skill kie-generate zainstalowany — Kie.ai + ImgBB skonfigurowane, brand rules SACRUM, output Marketing/media/
 - 2026-06-11: Claude Cron VPS zainstalowany — systemd claude-cron.service, port 7777, workspace /home/claude/vault-git, Claude zalogowany jako piotr.matejuk@gmail.com
 - 2026-06-11: Claude Cron Mac zainstalowany — /Users/piotrmatejuk/Documents/claude-cron, autostart hook w settings.json, CLAUDE_CRON_VPS_URL=http://100.120.58.26:7777
 - 2026-06-11: 3 joby skonfigurowane: memory-update (co dzień 06:00 Warsaw), weekly-report (pon 08:00 Warsaw), vault-git-pull (co 4h)
