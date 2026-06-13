@@ -59,6 +59,9 @@ def exchange_short_for_long(short_token, app_secret):
         return json.loads(r.read())["access_token"]
 
 
+SACRUM_PAGE_ID = "1134837063048382"
+
+
 def get_page_token(long_token, app_secret):
     url = f"https://graph.facebook.com/v20.0/me/accounts?access_token={long_token}"
     with urllib.request.urlopen(url) as r:
@@ -70,15 +73,15 @@ def get_page_token(long_token, app_secret):
         sys.exit(1)
 
     print("\nZnalezione strony:")
-    for i, p in enumerate(pages):
-        print(f"  [{i}] {p['name']} (ID: {p['id']})")
+    for p in pages:
+        print(f"  - {p['name']} (ID: {p['id']})")
 
-    if len(pages) == 1:
-        idx = 0
-    else:
-        idx = int(input("Wybierz numer strony SACRUM: "))
+    page = next((p for p in pages if p["id"] == SACRUM_PAGE_ID), None)
+    if not page:
+        print(f"Nie znaleziono strony SACRUM (ID: {SACRUM_PAGE_ID})")
+        sys.exit(1)
 
-    page = pages[idx]
+    print(f"Auto-wybrano: {page['name']}")
     return page["id"], page["name"], page["access_token"]
 
 
@@ -125,10 +128,12 @@ class CallbackHandler(http.server.BaseHTTPRequestHandler):
             print(f"[4/4] Instagram Business Account ID: {ig_id or 'nie znaleziono'}")
 
             # zapisz wszystko
-            save_env("FB_PAGE_ID", page_id)
-            save_env("FB_PAGE_TOKEN", page_token)
+            save_env("FB_PAGE_ID_SACRUM", page_id)
+            save_env("FB_PAGE_TOKEN_SACRUM", page_token)
             if ig_id:
-                save_env("IG_ACCOUNT_ID", ig_id)
+                save_env("IG_ACCOUNT_ID_SACRUM", ig_id)
+            else:
+                print("  ⚠️  IG: strona SACRUM nie ma podpiętego Instagram Business Account")
 
             captured_token["done"] = True
 
