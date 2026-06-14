@@ -26,7 +26,7 @@ def load_env():
         for line in env_file.read_text().splitlines():
             if "=" in line and not line.startswith("#"):
                 k, v = line.split("=", 1)
-                os.environ.setdefault(k.strip(), v.strip())
+                os.environ[k.strip()] = v.strip()
 
 
 def api_post(url, payload):
