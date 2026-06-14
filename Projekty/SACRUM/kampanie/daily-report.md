@@ -1,36 +1,37 @@
 # Kampanie Meta Ads — raport dzienny
 
-*Ostatni update: 2026-06-13*
+*Ostatni update: 2026-06-14*
 
 ---
 
-## CIEŃ Festiwal | konto: act_2241371043056679 | łącznie: 1 693 PLN
+## CIEŃ Festiwal | konto: act_2241371043056679 | łącznie: 1 688 PLN
 
-| Ad Set | Wydano PLN | Δ% | Kliknięcia | Δ% | CTR | CPC PLN | Reach | Δ% |
-|--------|-----------|-----|-----------|-----|-----|---------|-------|-----|
-| Cien_Purchase_broad | 769,68 | -18% | 1329 | -10% | 3,82% | 0,58 | 20 861 | **+7%** |
-| Reel_CzarnoCzerwone_Broad | 826,50 | -26% | 1047 | -39% | 2,94% | 0,79 | 14 759 | -48% |
-| RT_Visitors14d_v1 | 96,91 | -81% | 80 | -78% | 2,60% | 1,21 | 660 | -54% |
-| PL_broad_InitCheckout_25-45 | — | -100% | — | -100% | — | — | — | — |
+| Ad Set | Wydano PLN | Δ% | Kliknięcia | Δ% | CTR | CPC PLN | Reach | Δ% | Freq |
+|--------|-----------|-----|-----------|-----|-----|---------|-------|-----|------|
+| Cien_Purchase_broad | 769,00 | -12% | 1302 | -12% | 3,81% | 0,59 | 20 090 | -2% | 1,70 |
+| Reel_CzarnoCzerwone_Broad | 838,56 | -16% | 1074 | -29% | 3,00% | 0,78 | 14 823 | **-39%** | **2,42** |
+| RT_Visitors14d_v1 | 80,14 | **-81%** | 73 | -75% | 2,80% | 1,10 | 627 | -53% | **4,16** |
+| PL_broad_InitCheckout_25-45 | — | -100% | — | -100% | — | — | — | — | — |
 
-## SACRUM | konto: act_4334961180078194 | łącznie: 477 PLN
+## SACRUM | konto: act_4334961180078194 | łącznie: 479 PLN
 
-| Ad Set | Wydano PLN | Δ% | Kliknięcia | Δ% | CTR | CPC PLN | Reach | Δ% |
-|--------|-----------|-----|-----------|-----|-----|---------|-------|-----|
-| AS_TOF_Animacja | 109,19 | NOWA | 161 | NOWA | 5,12% | 0,68 | 2 257 | NOWA |
-| AS_TOF_Specjalisci | 368,02 | NOWA | 443 | NOWA | 3,46% | 0,83 | 8 295 | NOWA |
+| Ad Set | Wydano PLN | Δ% | Kliknięcia | Δ% | CTR | CPC PLN | Reach | Δ% | Freq |
+|--------|-----------|-----|-----------|-----|-----|---------|-------|-----|------|
+| AS_TOF_Animacja | 129,77 | NOWA | 197 | NOWA | **5,24%** | **0,66** | 2 706 | NOWA | 1,39 |
+| AS_TOF_Specjalisci | 349,31 | NOWA | 417 | +283% | 3,61% | 0,84 | 7 619 | +270% | 1,52 |
 
-**Łączny wydatek obu kont:** 2 170 PLN / 7 dni
-
----
-
-## Propozycje optymalizacji
-
-1. **AS_TOF_Animacja** — CTR 5.12%, CPC 0.68 PLN — najlepszy wynik na obu kontach. Zwiększ budżet 2x.
-2. **RT_Visitors14d_v1** — spada -80%. Wyłącz lub zresetuj grupę odbiorców.
-3. **Reel_CzarnoCzerwone_Broad** — reach -48% to sygnał zmęczenia kreacji. Odśwież materiał wideo.
-4. **Cien_Purchase_broad** — jedyna kampania z rosnącym reach (+7%). Nie ruszać.
+**Łączny wydatek obu kont:** 2 167 PLN / 7 dni
 
 ---
 
-*Następny raport: jutro rano | Źródło: Supermetrics Meta Ads*
+## Analiza
+
+- **AS_TOF_Animacja** — CTR 5,24%, CPC 0,66 PLN. Najlepsza kreacja na obu kontach. Zwiększ budżet 2x.
+- **Cien_Purchase_broad** — stabilna, CTR 3,81%, CPC 0,59. Jedyna kampania Cień z reach powyżej 20k. Nie ruszaj.
+- **Reel_CzarnoCzerwone_Broad** — frequency 2,42 i reach -39%. Zmęczenie kreacji wchodzi w fazę terminalną. Odśwież wideo lub wyłącz.
+- **RT_Visitors14d_v1** — frequency 4,16 na zasięgu 627 osób. Klikasz w tych samych 600 ludzi po cztery razy. Wyłącz.
+- **AS_TOF_Specjalisci** — CPC rośnie do 0,84 PLN (+43%) mimo skalowania reach. Obserwuj przez kolejne 48h.
+
+---
+
+*Następny raport: 2026-06-15 rano | Źródło: Supermetrics Meta Ads*
