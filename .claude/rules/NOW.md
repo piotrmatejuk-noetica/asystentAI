@@ -45,6 +45,8 @@
 - 2026-06-11: 3 joby skonfigurowane: memory-update (co dzień 06:00 Warsaw), weekly-report (pon 08:00 Warsaw), vault-git-pull (co 4h)
 - 2026-06-10: deep-research skill działa — perplexity/sonar-deep-research przez OpenRouter, koszt ~$0.20/raport
 - 2026-06-15: Matejuk AI (@matejukAI2_bot) pełna wersja live — nowy bot token (Hostinger conflict fixed), webhook-keeper aktywny, 4 pliki workspace (SOUL/TOOLS/AGENTS/MEMORY), vault-git read, email IMAP obie skrzynki, Genspark/claude-sonnet-4-6
+- 2026-06-15: Email WYSYŁANIE aktywne — email-send.py SMTP, konta piotr + sacrum
+- 2026-06-15: WhatsApp Bridge live — wa-bridge.service (whatsapp-web.js), sparowany z kontem Piotra, localhost:3000
 
 ## Blokery
 
@@ -65,3 +67,4 @@
 | Claude Login (VPS) | ✅ zalogowany | piotr.matejuk@gmail.com |
 | OpenClaw Telegram | ✅ live 24/7 | @matejukAI2_bot, systemd openclaw.service, webhook https://klauzule.tail4676a1.ts.net (port 8787) |
 | Webhook Keeper | ✅ działa | systemd webhook-keeper.service — resetuje webhook co 5s (Hostinger konflikt) |
+| WhatsApp Bridge | ✅ sparowany | systemd wa-bridge.service, localhost:3000, whatsapp-web.js, wysyłka przez curl POST /send |
