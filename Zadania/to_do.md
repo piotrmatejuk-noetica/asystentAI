@@ -1,5 +1,5 @@
 ---
-ostatnia_aktualizacja: 2026-06-11
+ostatnia_aktualizacja: 2026-06-15
 ---
 
 # TODO — Dashboard Zadań
