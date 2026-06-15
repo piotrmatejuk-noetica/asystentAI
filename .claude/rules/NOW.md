@@ -1,6 +1,6 @@
 # NOW — Bieżący kontekst
 
-*Ostatni update: 2026-06-15 12:15*
+*Ostatni update: 2026-06-15 23:30*
 
 ## Aktywne projekty
 
@@ -8,7 +8,7 @@
 |---------|--------|----------|-------|
 | Personal OS Claude Code | Gotowy | — | Pełen stack: Happy + Claude Code + Telegram Channels + Tailscale + vault-git na VPS; cloud routines aktywne |
 | Marketing SACRUM | Aktywny | ciągły | Pozyskiwanie klientów terapia psychodeliczna, Meta Ads + IG |
-| Matejuk AI | ✅ Live | — | OpenClaw (@Matejuk_aibot) live na VPS klauzule, Genspark/Claude Sonnet 4.6, webhook keeper aktywny |
+| Matejuk AI | ✅ Live | — | OpenClaw (@matejukAI2_bot) live na VPS klauzule, Genspark/Claude Sonnet 4.6, webhook keeper aktywny; email IMAP działa (piotr@sacrum.life + piotr.matejuk@gmail.com) |
 | Magda marketing | Startuje | — | Od zera: socjale, marka osobista, Google/Meta Ads, baza mailingowa |
 | egoisnt.com | Aktywny | — | CRM w budowie, Shopify/Next.js |
 
@@ -44,10 +44,11 @@
 - 2026-06-11: Claude Cron Mac zainstalowany — /Users/piotrmatejuk/Documents/claude-cron, autostart hook w settings.json, CLAUDE_CRON_VPS_URL=http://100.120.58.26:7777
 - 2026-06-11: 3 joby skonfigurowane: memory-update (co dzień 06:00 Warsaw), weekly-report (pon 08:00 Warsaw), vault-git-pull (co 4h)
 - 2026-06-10: deep-research skill działa — perplexity/sonar-deep-research przez OpenRouter, koszt ~$0.20/raport
+- 2026-06-15: Matejuk AI (@matejukAI2_bot) pełna wersja live — nowy bot token (Hostinger conflict fixed), webhook-keeper aktywny, 4 pliki workspace (SOUL/TOOLS/AGENTS/MEMORY), vault-git read, email IMAP obie skrzynki, Genspark/claude-sonnet-4-6
 
 ## Blokery
 
-- **Matejuk AI — piotr@sacrum.life**: Włącz IMAP w Gmail → Settings → Forwarding and POP/IMAP → Enable IMAP, potem wyślij App Password z myaccount.google.com/apppasswords
+*(brak aktywnych blokerów)*
 
 ## Infrastruktura VPS (5.180.180.200 / klauzule)
 
@@ -62,5 +63,5 @@
 | Claude Cron VPS | ✅ działa | systemd claude-cron.service, port 7777, workspace: /home/claude/vault-git |
 | Claude Cron Mac | ✅ działa | /Users/piotrmatejuk/Documents/claude-cron, autostart hook, VPS URL skonfigurowany |
 | Claude Login (VPS) | ✅ zalogowany | piotr.matejuk@gmail.com |
-| OpenClaw Telegram | ✅ live 24/7 | @Matejuk_aibot, systemd openclaw.service, webhook https://klauzule.tail4676a1.ts.net:8787 |
+| OpenClaw Telegram | ✅ live 24/7 | @matejukAI2_bot, systemd openclaw.service, webhook https://klauzule.tail4676a1.ts.net (port 8787) |
 | Webhook Keeper | ✅ działa | systemd webhook-keeper.service — resetuje webhook co 5s (Hostinger konflikt) |
