@@ -1,6 +1,6 @@
 # NOW — Bieżący kontekst
 
-*Ostatni update: 2026-06-11 12:30*
+*Ostatni update: 2026-06-15 12:15*
 
 ## Aktywne projekty
 
@@ -8,7 +8,7 @@
 |---------|--------|----------|-------|
 | Personal OS Claude Code | Gotowy | — | Pełen stack: Happy + Claude Code + Telegram Channels + Tailscale + vault-git na VPS; cloud routines aktywne |
 | Marketing SACRUM | Aktywny | ciągły | Pozyskiwanie klientów terapia psychodeliczna, Meta Ads + IG |
-| Matejuk AI | ✅ Zbudowany | — | Bot live 24/7 na VPS; czeka na App Passwords do Gmail (3 konta) |
+| Matejuk AI | ✅ Live | — | OpenClaw (@Matejuk_aibot) live na VPS klauzule, Genspark/Claude Sonnet 4.6, webhook keeper aktywny |
 | Magda marketing | Startuje | — | Od zera: socjale, marka osobista, Google/Meta Ads, baza mailingowa |
 | egoisnt.com | Aktywny | — | CRM w budowie, Shopify/Next.js |
 
@@ -57,8 +57,10 @@
 | Happy | ✅ działa | autostart systemd |
 | Telegram Channels | ✅ 24/7 | --dangerously-skip-permissions |
 | Tailscale | ✅ połączony | IP 100.120.58.26 |
-| Tailscale Funnel | ✅ aktywny | https://klauzule.tail4676a1.ts.net → :7777 (webhooks Claude Cron) |
+| Tailscale Funnel | ✅ aktywny | https://klauzule.tail4676a1.ts.net → :8787 (OpenClaw webhook) / Claude Cron na :7777 (internal) |
 | vault-git | ✅ sklonowany | /root/vault-git, pull co 4h |
 | Claude Cron VPS | ✅ działa | systemd claude-cron.service, port 7777, workspace: /home/claude/vault-git |
 | Claude Cron Mac | ✅ działa | /Users/piotrmatejuk/Documents/claude-cron, autostart hook, VPS URL skonfigurowany |
 | Claude Login (VPS) | ✅ zalogowany | piotr.matejuk@gmail.com |
+| OpenClaw Telegram | ✅ live 24/7 | @Matejuk_aibot, systemd openclaw.service, webhook https://klauzule.tail4676a1.ts.net:8787 |
+| Webhook Keeper | ✅ działa | systemd webhook-keeper.service — resetuje webhook co 5s (Hostinger konflikt) |
