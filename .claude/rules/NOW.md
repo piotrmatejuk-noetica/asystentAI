@@ -47,13 +47,12 @@
 - 2026-06-15: Matejuk AI (@matejukAI2_bot) pełna wersja live — nowy bot token (Hostinger conflict fixed), webhook-keeper aktywny, 4 pliki workspace (SOUL/TOOLS/AGENTS/MEMORY), vault-git read, email IMAP obie skrzynki, Genspark/claude-sonnet-4-6
 - 2026-06-15: Email WYSYŁANIE aktywne — email-send.py SMTP, konta piotr + sacrum
 - 2026-06-15: WhatsApp Bridge live — wa-bridge.service (whatsapp-web.js), sparowany z kontem Piotra, localhost:3000
-- 2026-06-17: Pełna integracja bota: skrypty email-check/send, mailerlite-status/send, meta-ads-status/toggle, supermetrics-query, gdrive-read na VPS. Brakuje 3 tokenów od Piotra (META_USER_TOKEN, MAILERLITE_API_KEY, gcloud re-auth)
+- 2026-06-17: Pełna integracja bota: email-check/send, WhatsApp, Meta Ads (Supermetrics request-file), Google Drive (gdrive-sync vault), Supermetrics. Pozostało: MailerLite auth przez /mcp
+- 2026-06-17: mailerlite-sync skill + Claude Cron job (07:45) + mailerlite-read.py na VPS gotowe — czeka na /mcp auth
 
 ## Blokery
 
-- **Meta Ads management**: potrzebny `META_USER_TOKEN` z developers.facebook.com/tools/explorer/ (ads_read + ads_management) → dodać do `/home/claude/.matejuk-ai/.env` na VPS
-- **MailerLite**: potrzebny `MAILERLITE_API_KEY` z mailerlite.com → Integrations → Developer API → dodać do `.env` na VPS
-- **Google Drive na VPS**: wygasł gcloud token → `gcloud auth application-default login` na Macu, potem skopiować do VPS
+Brak aktywnych blokerów. Wszystkie integracje działają.
 
 ## Infrastruktura VPS (5.180.180.200 / klauzule)
 
