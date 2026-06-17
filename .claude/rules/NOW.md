@@ -49,6 +49,9 @@
 - 2026-06-15: WhatsApp Bridge live — wa-bridge.service (whatsapp-web.js), sparowany z kontem Piotra, localhost:3000
 - 2026-06-17: Pełna integracja bota: email-check/send, WhatsApp, Meta Ads (Supermetrics request-file), Google Drive (gdrive-sync vault), Supermetrics. Pozostało: MailerLite auth przez /mcp
 - 2026-06-17: mailerlite-sync skill + Claude Cron job (07:45) + mailerlite-read.py na VPS gotowe — czeka na /mcp auth
+- 2026-06-17: 5 nowych integracji: Stripe (platnosci SACRUM live), Instagram media/comments, FB Messenger polling→Telegram (co 5min), Cal.com self-hosted (port 3002), Tally webhook (https://klauzule.tail4676a1.ts.net/tally), smsapi.py stub
+- 2026-06-17: Cal.com wymaga DNS A booking.sacrum.life → 5.180.180.200 + certbot dla SSL
+- 2026-06-17: smsapi.pl wymaga konta + SMSAPI_TOKEN w .env na VPS
 
 ## Blokery
 
