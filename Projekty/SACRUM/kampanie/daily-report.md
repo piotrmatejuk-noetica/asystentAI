@@ -1,37 +1,46 @@
 # Kampanie Meta Ads — raport dzienny
 
-*Ostatni update: 2026-06-14*
+*Ostatni update: 2026-06-17*
 
 ---
 
-## CIEŃ Festiwal | konto: act_2241371043056679 | łącznie: 1 688 PLN
+## CIEŃ Festiwal | konto: act_2241371043056679
 
-| Ad Set | Wydano PLN | Δ% | Kliknięcia | Δ% | CTR | CPC PLN | Reach | Δ% | Freq |
-|--------|-----------|-----|-----------|-----|-----|---------|-------|-----|------|
-| Cien_Purchase_broad | 769,00 | -12% | 1302 | -12% | 3,81% | 0,59 | 20 090 | -2% | 1,70 |
-| Reel_CzarnoCzerwone_Broad | 838,56 | -16% | 1074 | -29% | 3,00% | 0,78 | 14 823 | **-39%** | **2,42** |
-| RT_Visitors14d_v1 | 80,14 | **-81%** | 73 | -75% | 2,80% | 1,10 | 627 | -53% | **4,16** |
-| PL_broad_InitCheckout_25-45 | — | -100% | — | -100% | — | — | — | — | — |
+| Ad Set | ID | Wydano PLN | Kliknięcia | CTR | CPC PLN | Reach | Freq | Status |
+|--------|-----|-----------|-----------|-----|---------|-------|------|--------|
+| Cien_Purchase_broad | 120243879345870450 | 740,05 | 1211 | 3,76% | 0,61 | 18 040 | 1,78 | ✅ ACTIVE |
+| Reel_CzarnoCzerwone_Broad | 120247402307310450 | 806,54 | 1077 | 3,36% | 0,75 | 14 090 | **2,27** | ⚠️ ACTIVE |
+| RT_Visitors14d_v1 | 120248289679970450 | 17,37 | 12 | 2,07% | 1,45 | 281 | 2,06 | ⏸️ PAUSED |
 
-## SACRUM | konto: act_4334961180078194 | łącznie: 479 PLN
+## SACRUM | konto: act_4334961180078194
 
-| Ad Set | Wydano PLN | Δ% | Kliknięcia | Δ% | CTR | CPC PLN | Reach | Δ% | Freq |
-|--------|-----------|-----|-----------|-----|-----|---------|-------|-----|------|
-| AS_TOF_Animacja | 129,77 | NOWA | 197 | NOWA | **5,24%** | **0,66** | 2 706 | NOWA | 1,39 |
-| AS_TOF_Specjalisci | 349,31 | NOWA | 417 | +283% | 3,61% | 0,84 | 7 619 | +270% | 1,52 |
+| Ad Set | ID | Wydano PLN | Kliknięcia | CTR | CPC PLN | Reach | Freq | Status |
+|--------|-----|-----------|-----------|-----|---------|-------|------|--------|
+| AS_TOF_Animacja | 120254309425090197 | 254,24 | 389 | 4,09% | 0,65 | 6 809 | 1,40 | ✅ ACTIVE |
+| AS_TOF_Specjalisci | 120254023818930197 | 344,29 | 511 | 4,04% | 0,67 | 9 473 | 1,33 | ✅ ACTIVE |
 
-**Łączny wydatek obu kont:** 2 167 PLN / 7 dni
+**Łączny wydatek obu kont:** 2 162 PLN / 7 dni
 
 ---
 
 ## Analiza
 
-- **AS_TOF_Animacja** — CTR 5,24%, CPC 0,66 PLN. Najlepsza kreacja na obu kontach. Zwiększ budżet 2x.
-- **Cien_Purchase_broad** — stabilna, CTR 3,81%, CPC 0,59. Jedyna kampania Cień z reach powyżej 20k. Nie ruszaj.
-- **Reel_CzarnoCzerwone_Broad** — frequency 2,42 i reach -39%. Zmęczenie kreacji wchodzi w fazę terminalną. Odśwież wideo lub wyłącz.
-- **RT_Visitors14d_v1** — frequency 4,16 na zasięgu 627 osób. Klikasz w tych samych 600 ludzi po cztery razy. Wyłącz.
-- **AS_TOF_Specjalisci** — CPC rośnie do 0,84 PLN (+43%) mimo skalowania reach. Obserwuj przez kolejne 48h.
+- **Cien_Purchase_broad** — CTR 3,76%, CPC 0,61 PLN, reach 18k, freq 1,78. Stabilna. Nie ruszaj.
+- **AS_TOF_Animacja** — CTR 4,09%, CPC 0,65 PLN. Najlepsza kreacja. Zwiększ budżet.
+- **AS_TOF_Specjalisci** — CTR 4,04%, CPC 0,67 PLN. Dobra, monitoruj.
+- **Reel_CzarnoCzerwone_Broad** — freq 2,27, reach słaby. Zmęczenie kreacji. Rozważ nowe wideo lub wyłącz.
+- **RT_Visitors14d_v1** — PAUSED ✅ (freq 2,06 na 281 osobach — słusznie wstrzymane).
+
+## Zarządzanie kampaniami
+
+Bot może pauzować/wznawiać ad sety:
+```
+python3 /root/meta-ads-request.py pause 120247402307310450 act_2241371043056679
+python3 /root/meta-ads-request.py resume 120247402307310450 act_2241371043056679
+```
+Requestsy wykonuje Claude Code na Macu przez Supermetrics (co 30 min auto-check).
 
 ---
 
-*Następny raport: 2026-06-15 rano | Źródło: Supermetrics Meta Ads*
+*Źródło: Supermetrics Meta Ads | Okres: ostatnie 7 dni*
+*Następny update: 2026-06-18 06:00 (Claude Cron)*
