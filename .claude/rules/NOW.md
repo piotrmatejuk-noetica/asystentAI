@@ -61,12 +61,11 @@
 
 ## Blokery
 
-- **FB Page token (Magda bot)** — jedyny nierozwiązany bloker. Wymaga 1 kliknięcia Piotra:
-  1. **Prześlij Magdzie ten URL** (otrzymałeś przez Telegram): `https://www.facebook.com/v20.0/dialog/oauth?client_id=937795249248975&redirect_uri=https%3A%2F%2Fklauzule.tail4676a1.ts.net%2Fmeta%2Foauth&scope=pages_manage_posts%2Cpages_show_list%2Cpages_read_engagement%2Cinstagram_basic%2Cinstagram_content_publish&response_type=code`
-  2. Magda otwiera na telefonie i klika "Kontynuuj" — token leci automatycznie na bota
-  - VPS handler: `magda-oauth.service` aktywny na `https://klauzule.tail4676a1.ts.net/meta/oauth` (systemd, auto-restart)
-  - magda-agent endpoint: `POST /api/meta/receive-token` (VPS wysyła token przez Tailscale do Mac)
-  - redirect URI `https://klauzule.tail4676a1.ts.net/meta/oauth` jest zarejestrowany w app "Matejuk AI Publisher" — NIE WYMAGA FB Developer Console
+- **FB Page token (Magda bot)** — prawie gotowe. Piotr jest adminem strony Magdy (borsuk1916@gmail.com = "Piotrek Mate"). Jedyny krok:
+  1. Dodaj `borsuk1916@gmail.com` jako Developer/Tester w FB Developer Console: https://developers.facebook.com/apps/937795249248975/roles/roles/
+  2. Następnie zaloguj się jako borsuk1916@gmail.com i otwórz OAuth URL: `https://www.facebook.com/v20.0/dialog/oauth?client_id=937795249248975&redirect_uri=https%3A%2F%2Fklauzule.tail4676a1.ts.net%2Fmeta%2Foauth&scope=pages_manage_posts%2Cpages_show_list%2Cpages_read_engagement%2Cinstagram_basic%2Cinstagram_content_publish&response_type=code`
+  - `magda-oauth.service` ✅ aktywny na VPS (port 8789 przez Tailscale Funnel)
+  - Token trafi automatycznie do magda-agent po kliknięciu "Kontynuuj"
 
 ## Rozwiązane (nie wymagają akcji)
 
