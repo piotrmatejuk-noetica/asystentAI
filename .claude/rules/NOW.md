@@ -1,6 +1,6 @@
 # NOW — Bieżący kontekst
 
-*Ostatni update: 2026-06-15 23:30*
+*Ostatni update: 2026-06-19*
 
 ## Aktywne projekty
 
@@ -9,7 +9,7 @@
 | Personal OS Claude Code | Gotowy | — | Pełen stack: Happy + Claude Code + Telegram Channels + Tailscale + vault-git na VPS; cloud routines aktywne |
 | Marketing SACRUM | Aktywny | ciągły | Pozyskiwanie klientów terapia psychodeliczna, Meta Ads + IG |
 | Matejuk AI | ✅ Live | — | OpenClaw (@matejukAI2_bot) live na VPS klauzule, Genspark/Claude Sonnet 4.6, webhook keeper aktywny; email IMAP działa (piotr@sacrum.life + piotr.matejuk@gmail.com) |
-| Magda marketing | Startuje | — | Od zera: socjale, marka osobista, Google/Meta Ads, baza mailingowa |
+| Magda marketing | Aktywny | — | magda-agent live (LaunchAgent port 8000), @MagdaMarketingBot, MailerLite "Magda" group, magdalenagajdzinska.pl podłączona |
 | egoisnt.com | Aktywny | — | CRM w budowie, Shopify/Next.js |
 
 ## Priorytety tego tygodnia
@@ -52,10 +52,18 @@
 - 2026-06-17: 5 nowych integracji: Stripe (platnosci SACRUM live), Instagram media/comments, FB Messenger polling→Telegram (co 5min), Cal.com self-hosted (port 3002), Tally webhook (https://klauzule.tail4676a1.ts.net/tally), smsapi.py stub
 - 2026-06-17: Cal.com wymaga DNS A booking.sacrum.life → 5.180.180.200 + certbot dla SSL
 - 2026-06-17: smsapi.pl wymaga konta + SMSAPI_TOKEN w .env na VPS
+- 2026-06-19: /aktual command na @matejukAI2_bot (VPS AGENTS.md) — pobiera email/Stripe/MailerLite/IG/FB/WhatsApp/Meta Ads na żądanie, zamiast automatycznie
+- 2026-06-19: magda-agent rozbudowany — moduł MailerLite, /aktual, Opus do kreatywnych, daily brief z ML stats, panel ustawień ML; GitHub repo: piotrmatejuk-noetica/magda-agent
+- 2026-06-19: MailerLite group "Magda" (ID: 190688211489523110) — baza Magdy oddzielna od reszty
+- 2026-06-19: lead.php (SEOHost) + functions/api/lead.ts (CF Pages) przepisane na MailerLite — tag: newsletter / ebook
+- 2026-06-19: CF Pages MAILERLITE_API_KEY — wymaga ręcznego ustawienia w Cloudflare dashboard (no creds available); SEOHost PHP działa od razu
+- 2026-06-19: FB Page Magdy (61561269893962) — OAuth URL zbudowany, czeka na login Piotra z kontem mającym dostęp do strony
 
 ## Blokery
 
-Brak aktywnych blokerów. Wszystkie integracje działają.
+- **CF Pages env var**: MAILERLITE_API_KEY trzeba wkleić ręcznie w Cloudflare Pages dashboard → Settings → Environment variables. Klucz = ten sam JWT z MailerLite Piotra.
+- **FB Page token (Magda bot)**: Otwórz `http://localhost:8000/meta/callback` flow po uruchomieniu magda-agent i zaloguj się kontem z dostępem do https://www.facebook.com/profile.php?id=61561269893962
+- **MailerLite automation (ebook)**: Stworzyć ręcznie w MailerLite UI — gdy ktoś dołączy do grupy "Magda" z `fields.source = ebook`, wysłać email z PDFem "Inne narzędzie"
 
 ## Infrastruktura VPS (5.180.180.200 / klauzule)
 
@@ -73,3 +81,15 @@ Brak aktywnych blokerów. Wszystkie integracje działają.
 | OpenClaw Telegram | ✅ live 24/7 | @matejukAI2_bot, systemd openclaw.service, webhook https://klauzule.tail4676a1.ts.net (port 8787) |
 | Webhook Keeper | ✅ działa | systemd webhook-keeper.service — resetuje webhook co 5s (Hostinger konflikt) |
 | WhatsApp Bridge | ✅ sparowany | systemd wa-bridge.service, localhost:3000, whatsapp-web.js, wysyłka przez curl POST /send |
+
+## Magda Marketing Bot (Mac — port 8000)
+
+| Komponent | Status | Uwagi |
+|-----------|--------|-------|
+| magda-agent | ✅ działa | LaunchAgent com.magda.agent, port 8000, Python 3.12, SQLite ~/.magda_agent/db.sqlite3 |
+| @MagdaMarketingBot | ✅ live | Telegram bot, /start /aktual /post /artykul /newsletter |
+| MailerLite | ✅ podłączony | Klucz w SQLite + .env, group "Magda" ID 190688211489523110 |
+| magdalenagajdzinska.pl | ✅ lead.php | SEOHost FTP, zapisuje do ML group "Magda", tag: newsletter/ebook |
+| CF Pages lead.ts | ⚠️ czeka | MAILERLITE_API_KEY env var do ustawienia ręcznie w CF dashboard |
+| Meta (FB/IG) | ⚠️ czeka | FB Page OAuth flow do uruchomienia przez Piotra |
+| GitHub | ✅ zsynchronizowany | piotrmatejuk-noetica/magda-agent, branch main, aktualne |
