@@ -1,5 +1,5 @@
 ---
-ostatnia_aktualizacja: 2026-06-15
+ostatnia_aktualizacja: 2026-06-19
 ---
 
 # TODO — Dashboard Zadań
@@ -11,6 +11,8 @@ ostatnia_aktualizacja: 2026-06-15
 ## TEN TYDZIEŃ
 
 ## PÓŹNIEJ
+
+- [ ] [[w_trakcie/zbuduj-premium-pwa-dla-uczestnikow-cien-festiwal|PWA CIEŃ Festiwal — harmonogram + mapa + dziennik]] - 🟡 wazne - 30.06
 
 ## BEZ TERMINU
 
