@@ -61,10 +61,11 @@
 
 ## Blokery
 
-- **FB Page token (Magda bot)** — jedyny nierozwiązany bloker. Wymaga 2 kroków Piotra:
-  1. **FB Developer Console** → https://developers.facebook.com/apps/1437087088461649/fb-login/settings/ → dodaj `http://localhost:8000/meta/callback` do "Valid OAuth Redirect URIs" → Zapisz
-  2. Wejdź na http://localhost:8000 (magda-agent panel) → Ustawienia → kliknij "Połącz z Meta" i zaloguj kontem z dostępem do strony Magdy
-  - Wszystko inne gotowe: callback handler w magda-agent jest zaimplementowany i zapisze token automatycznie
+- **FB Page token (Magda bot)** — jedyny nierozwiązany bloker. Wymaga 1 kliknięcia Piotra:
+  - Skrypt `get_magda_fb_token.py` działa na Macu (port 8765, PID 59623)
+  - Przeglądarka otwarta z URL autoryzacji Facebook (app: Matejuk AI Publisher, redirect URI już zarejestrowany — nie trzeba FB Developer Console)
+  - **Wystarczy kliknąć "Kontynuuj jako Piotr" w przeglądarce** → token zapisze się automatycznie do magda-agent DB
+  - Telegram: wiadomość wysłana do Piotra przez @MagdaMarketingBot
 
 ## Rozwiązane (nie wymagają akcji)
 
