@@ -61,9 +61,15 @@
 
 ## Blokery
 
-- **CF Pages env var**: MAILERLITE_API_KEY trzeba wkleić ręcznie w Cloudflare Pages dashboard → Settings → Environment variables. Klucz = ten sam JWT z MailerLite Piotra.
-- **FB Page token (Magda bot)**: Otwórz `http://localhost:8000/meta/callback` flow po uruchomieniu magda-agent i zaloguj się kontem z dostępem do https://www.facebook.com/profile.php?id=61561269893962
-- **MailerLite automation (ebook)**: Stworzyć ręcznie w MailerLite UI — gdy ktoś dołączy do grupy "Magda" z `fields.source = ebook`, wysłać email z PDFem "Inne narzędzie"
+- **FB Page token (Magda bot)** — jedyny nierozwiązany bloker. Wymaga 2 kroków Piotra:
+  1. **FB Developer Console** → https://developers.facebook.com/apps/1437087088461649/fb-login/settings/ → dodaj `http://localhost:8000/meta/callback` do "Valid OAuth Redirect URIs" → Zapisz
+  2. Wejdź na http://localhost:8000 (magda-agent panel) → Ustawienia → kliknij "Połącz z Meta" i zaloguj kontem z dostępem do strony Magdy
+  - Wszystko inne gotowe: callback handler w magda-agent jest zaimplementowany i zapisze token automatycznie
+
+## Rozwiązane (nie wymagają akcji)
+
+- ✅ CF Pages MAILERLITE_API_KEY — funkcja proksuje do SEOHost/lead.php gdy brak env var; działa bez CF dashboard
+- ✅ MailerLite ebook automation — lead.php wysyła email z ebookiem bezpośrednio przez PHP mail() + dodaje do grupy "Magda Ebook" (ID: 190689197368018487)
 
 ## Infrastruktura VPS (5.180.180.200 / klauzule)
 
@@ -90,6 +96,6 @@
 | @MagdaMarketingBot | ✅ live | Telegram bot, /start /aktual /post /artykul /newsletter |
 | MailerLite | ✅ podłączony | Klucz w SQLite + .env, group "Magda" ID 190688211489523110 |
 | magdalenagajdzinska.pl | ✅ lead.php | SEOHost FTP, zapisuje do ML group "Magda", tag: newsletter/ebook |
-| CF Pages lead.ts | ⚠️ czeka | MAILERLITE_API_KEY env var do ustawienia ręcznie w CF dashboard |
-| Meta (FB/IG) | ⚠️ czeka | FB Page OAuth flow do uruchomienia przez Piotra |
+| CF Pages lead.ts | ✅ fallback proxy | Gdy brak MAILERLITE_API_KEY → proksuje do SEOHost PHP; działa bez CF dashboard |
+| Meta (FB/IG) | ⚠️ 1 krok Piotra | Dodaj `http://localhost:8000/meta/callback` w FB Developer Console → panel → Połącz |
 | GitHub | ✅ zsynchronizowany | piotrmatejuk-noetica/magda-agent, branch main, aktualne |
