@@ -1,0 +1,26 @@
+[debug] [2026-06-20T04:25:58.784Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T04:25:58.787Z] Command:       /opt/homebrew/Cellar/node/25.9.0_2/bin/node /opt/homebrew/bin/firebase projects:addfirebase cien-festiwal-2026
+[debug] [2026-06-20T04:25:58.787Z] CLI Version:   15.22.0
+[debug] [2026-06-20T04:25:58.787Z] Platform:      darwin
+[debug] [2026-06-20T04:25:58.787Z] Node Version:  v25.9.0
+[debug] [2026-06-20T04:25:58.787Z] Detected Agent: claude-code_2-1-183_agent
+[debug] [2026-06-20T04:25:58.787Z] Time:          Sat Jun 20 2026 06:25:58 GMT+0200 (Central European Summer Time)
+[debug] [2026-06-20T04:25:58.787Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T04:25:58.795Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T04:25:58.984Z] Running auto auth
+[debug] [2026-06-20T04:25:58.987Z] No OAuth tokens found
+[debug] [2026-06-20T04:25:58.988Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/cien-festiwal-2026:addFirebase [none]
+[debug] [2026-06-20T04:26:00.188Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/cien-festiwal-2026:addFirebase 403
+[debug] [2026-06-20T04:26:00.189Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/cien-festiwal-2026:addFirebase {"error":{"code":403,"message":"com.google.apps.framework.auth.IamPermissionDeniedException: Permission denied to enable service [firebase.googleapis.com] {\n  IAM{policy: 'serviceusage_services-/resourcemanager_projectnumbers/\\/000000274c1c9425/services/firebase.googleapis.com' resource: 'projectnumbers/168780665893/services/firebase.googleapis.com' \tpermission: 'serviceusage.services.enable'} denied {auditlog: false, cloudaudit: true}\n} (Neither system permission tenantmanagement.write granted nor fine-grained check com.google.api.tenant.auth.PublicAnnotations$DefaultTenantManagerAuthChecker passed): securityContext=ValidatedSecurityContext{gaiauser/0x1}","status":"PERMISSION_DENIED"}}
+[debug] [2026-06-20T04:26:00.190Z] Request to https://firebase.googleapis.com/v1beta1/projects/cien-festiwal-2026:addFirebase had HTTP Error: 403, com.google.apps.framework.auth.IamPermissionDeniedException: Permission denied to enable service [firebase.googleapis.com] {
+  IAM{policy: 'serviceusage_services-/resourcemanager_projectnumbers/\/000000274c1c9425/services/firebase.googleapis.com' resource: 'projectnumbers/168780665893/services/firebase.googleapis.com' 	permission: 'serviceusage.services.enable'} denied {auditlog: false, cloudaudit: true}
+} (Neither system permission tenantmanagement.write granted nor fine-grained check com.google.api.tenant.auth.PublicAnnotations$DefaultTenantManagerAuthChecker passed): securityContext=ValidatedSecurityContext{gaiauser/0x1}
+[debug] [2026-06-20T04:26:00.192Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/cien-festiwal-2026:addFirebase had HTTP Error: 403, com.google.apps.framework.auth.IamPermissionDeniedException: Permission denied to enable service [firebase.googleapis.com] {
+  IAM{policy: 'serviceusage_services-/resourcemanager_projectnumbers/\/000000274c1c9425/services/firebase.googleapis.com' resource: 'projectnumbers/168780665893/services/firebase.googleapis.com' 	permission: 'serviceusage.services.enable'} denied {auditlog: false, cloudaudit: true}
+} (Neither system permission tenantmanagement.write granted nor fine-grained check com.google.api.tenant.auth.PublicAnnotations$DefaultTenantManagerAuthChecker passed): securityContext=ValidatedSecurityContext{gaiauser/0x1}
+    at responseToError (/opt/homebrew/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/opt/homebrew/lib/node_modules/firebase-tools/lib/apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
