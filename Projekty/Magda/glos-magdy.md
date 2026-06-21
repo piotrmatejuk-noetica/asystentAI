@@ -100,6 +100,8 @@ Zaproszenie, nie nacisk. Zdejmuje presję.
 - ✗ Mówienie „do wszystkich" — Magda mówi do jednej, konkretnej, refleksyjnej osoby
 - ✗ Pomijanie napięcia „wiedza ≠ zmiana" — bez niego to nie jej głos
 - ✗ Styl Piotra (uliczny, przekleństwa) — Magda jest cieplejsza, spokojniejsza, mniej szorstka
+- ✗ **Staccato i krótkie dramatyczne zdania seriami** — jedno zdanie–uderzenie za drugim to styl Piotra, nie Magdy. Magda buduje myśl dłuższym zdaniem, nie siekuje tekstu w urywki. Dopuszczalne jest jedno krótkie zdanie jako emfaza po dłuższym fragmencie — nie jako zasada kompozycyjna.
+- ✗ **Zbędne anglicyzmy** — zamiast „case study" → historia klienty/przypadek; zamiast „reel" → nagranie/film (w kontekście wewnętrznym ok, w tekście publikowanym nie). Pisz po polsku.
 
 ---
 
