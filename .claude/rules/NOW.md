@@ -1,6 +1,6 @@
 # NOW — Bieżący kontekst
 
-*Ostatni update: 2026-06-26*
+*Ostatni update: 2026-06-26 (PB infrastructure)*
 
 ## Aktywne projekty
 
@@ -11,7 +11,7 @@
 | Matejuk AI | ✅ Live | — | OpenClaw (@matejukAI2_bot) live na VPS klauzule, Genspark/Claude Sonnet 4.6, webhook keeper aktywny; email IMAP działa (piotr@sacrum.life + piotr.matejuk@gmail.com) |
 | Magda marketing | Aktywny | — | magda-agent live (LaunchAgent port 8000), @MagdaMarketingBot, MailerLite "Magda" group, magdalenagajdzinska.pl podłączona |
 | egoisnt.com | Aktywny | — | CRM w budowie, Shopify/Next.js |
-| Cień Festiwal PWA | ✅ Live | — | app.cienfestiwal.com, Netlify + PocketBase; pełen audit i refactor done 2026-06-25/26 |
+| Cień Festiwal PWA | ✅ Live | — | app.cienfestiwal.com, Netlify + PocketBase @ /pb (Tailscale Funnel → nginx:8097 → PB:8090); sacrum.life nie jest używane |
 
 ## Priorytety tego tygodnia
 
@@ -60,7 +60,8 @@
 - 2026-06-19: CF Pages MAILERLITE_API_KEY — wymaga ręcznego ustawienia w Cloudflare dashboard (no creds available); SEOHost PHP działa od razu
 - 2026-06-19: FB Page Magdy (61561269893962) — OAuth URL zbudowany, czeka na login Piotra z kontem mającym dostęp do strony
 - 2026-06-25/26: Cień PWA full audit + refactor — usunięto dead code (renderSlowDatingLocal 95 linii), naprawiono XSS (data-contact attr), photo persistence po reload (localStorage flag + Blob reconstruct), match modal dead end (→ sdOpenAddMeeting prefill), nawigacja (Drużyna→Dziennik w nav), auth friction (X button skip), performance (38 cząstek, O(n²)→squared distance, requestAnimationFrame pause on hidden)
-- 2026-06-25/26: Cień PWA nowe funkcje — push notifications live (VAPID keys, send-push.js Netlify Function, web-push), admin PIN server-side (Netlify env ADMIN_PIN), karty bez zdjęć → gradienty (5 kolorów), matches → PocketBase thumbnails + przycisk spotkania, share button ↑ na karcie (Web Share API), "← Wróć" w podglądzie karty, sw.js v59
+- 2026-06-25/26: Cień PWA nowe funkcje — push notifications live (VAPID keys, send-push.js Netlify Function, web-push), admin PIN server-side (Netlify env ADMIN_PIN), karty bez zdjęć → gradienty (5 kolorów), matches → PocketBase thumbnails + przycisk spotkania, share button ↑ na karcie (Web Share API), "← Wróć" w podglądzie karty
+- 2026-06-26: Cień PWA PocketBase infrastructure — ANN_PB/SD_PB/PB → /pb; Netlify /pb/* → Tailscale /cien-pb/ → nginx:8097 (strip prefix) → PocketBase:8090; cien_locations collection live; sw.js v67
 
 ## Blokery
 
