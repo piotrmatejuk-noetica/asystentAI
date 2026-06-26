@@ -43,6 +43,10 @@ Folder `.claude/` zawiera konfigurację Claude Code dla tego workspace:
 - `utworz-zadanie` — tworzenie nowego zadania w systemie Obsidian
 - `porzadkuj-media` — porządkowanie grafik, wideo i PDFów w workspace
 
+**Magda (magdalenagajdzinska.pl):**
+- `magda-glos` — pisze teksty w głosie Magdy Gajdzińskiej (posty, copy, maile, landing). Ładuje `Projekty/Magda/glos-magdy.md`. Zawiera zatwierdzone wzorce i kalibracje z redakcji.
+- `magda-reel` — pełny stack do produkcji Reelsów: Remotion 4.x, ElevenLabs voice clone, HeyGen talking photo, ffmpeg pipeline, brand rules, assety, gotowe komponenty.
+
 ## Opis workspace'u
 
 Personal OS Piotra Matejuka — zarządzanie 5 projektami (SACRUM, hipnoterapia.edu.pl, egoisnt.com, cienfestiwal.com, magdalenagajdzinska.pl), zadaniami, wiedzą i marketingiem.
