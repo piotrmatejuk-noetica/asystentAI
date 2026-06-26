@@ -8,6 +8,8 @@ ostatnia_aktualizacja: 2026-06-22
 
 ## DZISIAJ
 
+- [ ] [[w_trakcie/cien-pwa-najlepsza-aplikacja-festiwalowa|Cień PWA — najlepsza aplikacja festiwalowa ever]] - 🔴 pilne - 25.06
+
 ## TEN TYDZIEŃ
 
 ## PÓŹNIEJ

@@ -16,3 +16,7 @@
 
 # System
 .DS_Store
+
+# Duze pliki PDF (powyzej limitu GitHub)
+Baza źródeł/**/*.pdf
+Baza\ źródeł/**/*.pdf
