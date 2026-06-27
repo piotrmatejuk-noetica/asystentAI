@@ -1,6 +1,6 @@
 # NOW — Bieżący kontekst
 
-*Ostatni update: 2026-06-26 (PB infrastructure)*
+*Ostatni update: 2026-06-27 (Cień PWA go-live)*
 
 ## Aktywne projekty
 
@@ -11,7 +11,7 @@
 | Matejuk AI | ✅ Live | — | OpenClaw (@matejukAI2_bot) live na VPS klauzule, Genspark/Claude Sonnet 4.6, webhook keeper aktywny; email IMAP działa (piotr@sacrum.life + piotr.matejuk@gmail.com) |
 | Magda marketing | Aktywny | — | magda-agent live (LaunchAgent port 8000), @MagdaMarketingBot, MailerLite "Magda" group, magdalenagajdzinska.pl podłączona |
 | egoisnt.com | Aktywny | — | CRM w budowie, Shopify/Next.js |
-| Cień Festiwal PWA | ✅ Live | — | app.cienfestiwal.com, Netlify + PocketBase @ /pb (Tailscale Funnel → nginx:8097 → PB:8090); sacrum.life nie jest używane |
+| Cień Festiwal PWA | ✅ LIVE do użytkowników | 03-05.07.2026 | app.cienfestiwal.com, sw v76, 27 artykułów, 13 zdjęć lokalnych, SD/push/drużyna live; deploy zawsze przez Netlify CLI (nie build hook) |
 
 ## Priorytety tego tygodnia
 
@@ -62,6 +62,7 @@
 - 2026-06-25/26: Cień PWA full audit + refactor — usunięto dead code (renderSlowDatingLocal 95 linii), naprawiono XSS (data-contact attr), photo persistence po reload (localStorage flag + Blob reconstruct), match modal dead end (→ sdOpenAddMeeting prefill), nawigacja (Drużyna→Dziennik w nav), auth friction (X button skip), performance (38 cząstek, O(n²)→squared distance, requestAnimationFrame pause on hidden)
 - 2026-06-25/26: Cień PWA nowe funkcje — push notifications live (VAPID keys, send-push.js Netlify Function, web-push), admin PIN server-side (Netlify env ADMIN_PIN), karty bez zdjęć → gradienty (5 kolorów), matches → PocketBase thumbnails + przycisk spotkania, share button ↑ na karcie (Web Share API), "← Wróć" w podglądzie karty
 - 2026-06-26: Cień PWA PocketBase infrastructure — ANN_PB/SD_PB/PB → /pb; Netlify /pb/* → Tailscale /cien-pb/ → nginx:8097 (strip prefix) → PocketBase:8090; cien_locations collection live; sw.js v67
+- 2026-06-27: Cień PWA GO-LIVE — poszła do uczestników. Finalne poprawki: SD match notifications (poller 30s + push), radar drużyny ukryty (GPS do POI zostało), 13 zdjęć prelegentów lokalnie, 15 nowych artykułów bazy wiedzy + disclaimery psychodeliczne + kategoria Kultura, e002 opis, coords pogody Zamek Świny 50.9388/16.1125, auth copy fix, sw v76. Audyt: 8/10, brak blokerów. Deploy przez Netlify CLI (build hook nie uploaduje binarnych JPG reliably)
 
 ## Blokery
 
