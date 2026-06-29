@@ -1,20 +1,20 @@
 ---
-ostatnia_aktualizacja: 2026-06-22
+ostatnia_aktualizacja: 2026-06-29
 ---
 
 # TODO — Dashboard Zadań
 
 ## ZALEGŁE
 
-## DZISIAJ
+- [x] [[w_trakcie/cien-pwa-najlepsza-aplikacja-festiwalowa|Cień PWA — najlepsza aplikacja festiwalowa ever]] - 🔴 pilne - 25.06
 
-- [ ] [[w_trakcie/cien-pwa-najlepsza-aplikacja-festiwalowa|Cień PWA — najlepsza aplikacja festiwalowa ever]] - 🔴 pilne - 25.06
+## DZISIAJ
 
 ## TEN TYDZIEŃ
 
-## PÓŹNIEJ
-
 - [ ] [[w_trakcie/zbuduj-premium-pwa-dla-uczestnikow-cien-festiwal|PWA CIEŃ Festiwal — harmonogram + mapa + dziennik]] - 🟡 wazne - 30.06
+
+## PÓŹNIEJ
 
 ## BEZ TERMINU
 
